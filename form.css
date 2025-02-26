@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+body button {
+    margin-top: 20px;
+}
+
+body .tittle {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.head {
+    background-color: #eb5454d5;
+}
+.header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 105px;
+    height: 45px;
+    margin-right: 20px;
+}
+
+.header .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 23px 16px;
+    font-weight: 500;
+    margin: 8px;
+}
+
+.header .menu a:hover {
+    background-color: white;
+    color: black;
+}
+
+.header .icon {
+    margin-left: 25px;
+    color: white;
+    font-size: larger;
+}
+.header .icon a {
+    text-decoration: none;
+    color: #d2d2d7;
+}
+.header .icon .bags {
+    margin-left: 20px;
+}
+
+.header .icon .users {
+    margin-left: 20px;
+}
+.links {
+    margin-top: 8px;
+    display: flex ;
+    margin-left: 160px;
+    color: #515154;
+    font-size: 14px;
+}
+.links a {
+    text-decoration: none;
+    color: #515154;
+
+}
+.tieu-de {
+    margin-right: 50px;
+}
+
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #515154;
+    text-align: center;
+}
+
+.footer .icon a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.footer p {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 600;
+}

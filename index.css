@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+body button {
+    margin-top: 20px;
+}
+
+body .tittle {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+.head {
+    background-color: #eb5454d5;
+}
+.header {
+    height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    width: 40px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 23px 16px;
+    font-weight: 500;
+    margin: 8px;
+}
+
+.header .menu a:hover {
+    background-color: white;
+    color: black;
+}
+
+.header .icon {
+    margin-left: 25px;
+    color: white;
+    font-size: larger;
+}
+.header .icon a {
+    text-decoration: none;
+    color: white;
+}
+.header .icon .bags {
+    margin-left: 20px;
+}
+
+.header .icon .users {
+    margin-left: 20px;
+}
+
+.hinh img {
+    height: 100%;
+    width: 100%;
+}
+
+.hinh .ap {
+    margin-left: 25px;
+}
+
+.hinh .care {
+    margin-left: 25px;
+}
+
+.san-pham {
+    margin-top: 100px;
+}
+.san-pham a {
+    text-decoration: none;
+    color: black;
+}
+.san-pham .box {
+    width: 285px;
+    height: 408px;
+    position: relative;
+    padding: 24px 20px 16px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    border-radius: 2%;
+    margin-right: 20px;
+    margin-top: 23px;
+}
+
+.san-pham .box:hover {
+    border-color: rgb(119, 119, 119);
+}
+
+.san-pham h5 {
+    margin-top: 20px;
+    font-size: medium;
+    font-weight: 700;
+    text-align: left;
+}
+
+.san-pham .product img {
+    width: 245px;
+    height: 245px;
+    display: block;
+    object-fit: cover;
+}
+
+.san-pham .apple {
+    display: flex;
+    justify-content: center;
+}
+
+.san-pham .product {
+    margin-top: 20px;
+    width: 245px;
+    height: 343px;
+}
+
+.san-pham .tag {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+}
+
+.san-pham .tag img {
+    width: 99px;
+    height: 30px;
+    display: block;
+    object-fit: cover;
+}
+
+.san-pham .product .price {
+    bottom: 15px;
+    left: 20px;
+    position: absolute;
+}
+
+.san-pham .gia-goc {
+    color: #86868b;
+    text-decoration: line-through;
+    padding-left: 10px;
+}
+
+.san-pham .gia-ban {
+    color: #06c;
+    font-weight: 800;
+}
+
+.anh {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.anh .img {
+    display: block;
+    object-fit: cover;
+    height: 401px;
+    width: 1200px;
+    text-align: center;
+}
+
+.news {
+    margin-top: 70px;
+
+}
+
+.news .noidung {
+    display: flex;
+    justify-content: center;
+}
+
+.news .bao {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
+    border-radius: 3%;
+    margin: 10px;
+    padding-bottom: 15px;
+    width: 386.66px;
+}
+
+.news .bao img {
+    display: block;
+    object-fit: cover;
+    width: 386.66px;
+    height: 218px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+}
+
+.news .noidung .bao .date {
+    color: #86868b;
+    font-size: small;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.news .noidung .bao .news-tittles{
+    margin-left: 20px;
+    margin-right: 40px;
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.regist {
+    text-align: center;
+    background-color: #f2f2f2;
+    height: 242px;
+    margin-top: 80px;
+    padding: 30px 0px 30px 0px;
+    width: 100%;
+}
+
+.regist form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.regist form #inputEmail {
+    border-radius: 40px;
+    width: 470px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.regist form #registBtn {
+    background-color: #0066cc;
+    color: #f2f2f2;
+    border-radius: 40px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    margin-left: -52px;
+    font-size: 12px;
+}
+
+.footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #eb5454d5;
+    text-align: center;
+}
+
+.footer .icon a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.footer p {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
