@@ -80,6 +80,10 @@ body {
         padding: 10px;
     }
 
+    img {
+        max-width: 100%;
+    }
+    
     .menu-toggle {
         display: block;
     }
