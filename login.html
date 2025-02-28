@@ -15,17 +15,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
     " />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./login.css" />
     <title>BKU</title>
     <link rel="shortcut icon"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmMiyNm0-af3xQ5CPPwsVinkTyy0oc_MsvxQ&s"
         type="image/x-icon">
 </head>
+<style>
+
+</style>
 <body>
     <div class="position-sticky top-0 left-0 z-3 head" style="display: flex; justify-content: center;">
         <div class="header">
             <div class="logo">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8NSAKiaWzIi7N6loM5XV9gIAwvIYEw3QyQ&s" alt="" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8NSAKiaWzIi7N6loM5XV9gIAwvIYEw3QyQ&s"
+                    alt="" />
             </div>
             <div class="menu">
                 <a href="./index.html">Trang chủ</a>
@@ -38,47 +42,54 @@
             </div>
             <div class="icon">
                 <a href="login.html"><i class="fa-solid fa-user-large users"></i></a>
+                
             </div>
             <div class="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </div>
-    <div class="hinh">
-        <img src="./img20240414202042_14420242021.jpg" alt="" />
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+    <section id="loginSection" class="vh-100">
+        <div class="container py-5 h-100">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-6">
+                    <h2 style="color: #515154; text-align: center;">Đăng nhập</h2>
+                    <form id="loginForm">
+                        <div class="form-outline mb-4">
+                            <input type="text" id="myusername" class="form-control" placeholder="Username" required />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <input type="password" id="mypassword" class="form-control" placeholder="Password"
+                                required />
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" onclick="showPassword()">
+                            <label class="form-check-label"> Hiển thị mật khẩu </label>
+                        </div>
+                        <p id="err" style="color: red; text-align: center;"></p>
+                        <button type="submit" class="btn btn-primary w-100">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://r73troypb4obj.vcdn.cloud/website02/uploads/pictures/622ab4ab1a1b854d4e901806/content_ngoi-truong-duoc-danh-gia-cao-ve-chat-luong-giao-vien.jpg" class="d-block w-100 h-10" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr90TWskzLCXy1tCZs9_CC79HDTjKSyz6k50NA42hi3b5i8ocRdctC-TGZhAwhaK1DY4Q&usqp=CAU" class="d-block w-100 h-10" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://i.ytimg.com/vi/t1Q1cVZuNf8/mqdefault.jpg" class="d-block w-100 h-10" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
+    </section>
+    <section id="adminSection" style="display: none; padding: 30px;">
+        <h2 style="text-align: center;">Danh Sách Đăng Ký</h2>
+        <table class="table table-bordered mt-3">
+            <thead class="table-dark">
+                <tr>
+                    <th>Họ và tên</th>
+                    <th>Lớp</th>
+                    <th>Số điện thoại</th>
+                    <th>Ngày tham gia</th>
+                    <th>Lời tri ân</th>
+                    <th>Ảnh</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+        <button class="btn btn-danger" onclick="logout()">Đăng xuất</button>
+    </section>
     <div class="footer">
         <div class="icon">
             <a href="https://www.facebook.com/profile.php?id=100052907769357" target="_blank"><i
@@ -90,14 +101,29 @@
         </div>
         <p>Powered by: Nguyen Duc</p>
     </div>
-</body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-    integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script type="module" src="login.js"></script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+    
+    function showPassword() {
+        var check = document.getElementById("mypassword");
+        if (check.type === "password") {
+            check.type = "text";
+        } else {
+            check.type = "password";
+        }
+    }
+
+    function logout() {
+        document.getElementById("adminSection").style.display = "none";
+        document.getElementById("loginSection").style.display = "block";
+        document.getElementById("username").value = "";
+        document.getElementById("mypassword").value = "";
+        document.getElementById("err").innerText = "";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
 

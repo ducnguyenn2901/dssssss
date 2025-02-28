@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,76 +22,89 @@
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmMiyNm0-af3xQ5CPPwsVinkTyy0oc_MsvxQ&s"
         type="image/x-icon">
 </head>
-
 <body>
     <div class="position-sticky top-0 left-0 z-3 head" style="display: flex; justify-content: center;">
         <div class="header">
             <div class="logo">
-                <img src="https://i.ytimg.com/vi/t1Q1cVZuNf8/maxresdefault.jpg" alt="" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8NSAKiaWzIi7N6loM5XV9gIAwvIYEw3QyQ&s" alt="" />
             </div>
             <div class="menu">
                 <a href="./index.html">Trang chủ</a>
                 <a href="#iphone">Tin Tức</a>
-                <a href="#ipad">Thông tin</a>
+                <a href="./form.html">Tri ân</a>
                 <a href="./check.html">Sự kiện</a>
                 <a href="#watch">Quản lý điều hành</a>
                 <a href="#listen">Chuyên môn</a>
-
                 <a href="#listen">Liên hệ</a>
-                <!-- <a href="#phukien">Accessories</a>
-                <a href="./admin_login.html">Staff</a>
-                <a href="https://shopdunk.com/tra-gop">News</a>
-                <a href="https://shopdunk.com/khuyen-mai">Discount</a> -->
             </div>
             <div class="icon">
-                <a href="form.html"><i class="fa-solid fa-user-large users"></i></a>
+                <a href="login.html"><i class="fa-solid fa-user-large users"></i></a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </div>
+    <h2 style="color: white; margin-top: 20px;">Đăng ký tham gia ngày hội tri ân</h2>
+    <form id="registForm" style="margin-bottom: 20px;">
+        <label>Họ và tên:</label>
+        <input type="text" id="id" required><br>
 
-    <section class="vh-100" style="margin-top: -30px;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex align-items-center justify-content-center h-100">
-                <div class="col-md-8 col-lg-7 col-xl-6">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
-                        class="img-fluid" alt="Phone image">
-                </div>
-                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-                    <div class="form-outline mb-4">
-                        <h2 style="color: #515154;">Login</h2>
-                    </div>
-                    <form>
-                        <!-- Email input -->
-                        <div class="form-outline mb-4">
-                            <input type="text" id="username" class="is-invalid form-control form-control-lg"
-                                placeholder="Username"/>
-                            <p id="err_user" style="color: red;"></p>
-                        </div>
-                        <div class="form-outline mb-4">
-                            <input type="password" id="mypassword" class="is-invalid form-control form-control-lg"
-                                placeholder="Password" />
-                            <p id="err_pass" style="color: red;"></p>
-                        </div>
-                        <div class="d-flex justify-content-around align-items-center mb-4">
-                            <!-- Checkbox -->
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                                <label class="form-check-label" for="form1Example3"> Remember me </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" onclick="showPassword()">
-                                <label class="form-check-label" for="form1Example3"> Show Password</label>
-                            </div>
-                            <a href="regist.html" style="text-decoration: none;">Don't have an account?</a>
-                        </div>
-                        <p id="err" style="color: red;"></p>
-                        <input type="button" id="registBtn" value="Sign in" class="btn btn-primary btn-lg btn-block"
-                            onclick="checklogin()">
-                    </form>
-                </div>
+        <label>Lớp:</label>
+        <select id="class" style="cursor: pointer;" required>
+            <option value=""></option>
+            <option value="12CT">12CT</option>
+            <option value="12CL">12CL</option>
+            <option value="12CH">12CH</option>
+            <option value="12CA">12CA</option>
+            <option value="12CV">12CV</option>
+            <option value="12T">12T</option>
+            <option value="12L">12L</option>
+            <option value="12HS1">12HS1</option>
+            <option value="12HS2">12HS2</option>
+            <option value="12TN1">12TN1</option>
+            <option value="12TN2">12TN2</option>
+            <option value="12TN3">12TN3</option>
+            <option value="12TN4">12TN4</option>
+            <option value="12TN5">12TN5</option>
+            <option value="12TN6">12TN6</option>
+            <option value="12TN7">12TN7</option>
+            <option value="12TN8">12TN8</option>
+            <option value="12TN9">12TN9</option>
+            <option value="12TN10">12TN10</option>
+            <option value="12XH1">12XH1</option>
+            <option value="12XH2">12XH2</option>
+        </select><br>
+
+        <label>Số điện thoại:</label>
+        <input type="text" id="phone" required><br>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <label style="font-weight: bold; margin-bottom: 5px;">Chọn ngày tham gia:</label>
+            <div style="display: flex; flex-direction: column;">
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; white-space: nowrap;">
+                    <input type="radio" name="date" value="12-03-2025" style="margin: 0;" required> 
+                    <span style="white-space: nowrap;">12-03-2025</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; white-space: nowrap;">
+                    <input type="radio" name="date" value="13-03-2025" style="margin: 0;"> 
+                    <span style="white-space: nowrap;">13-03-2025</span>
+                </label>
             </div>
         </div>
-    </section>
+        
+        <label>Lời nhắn gửi:</label>
+        <textarea id="message"></textarea><br>
+        <input type="file" id="imageUpload" accept="image/*" multiple style="cursor: pointer;"><br>
+        <div id="imagePreview" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px;"></div>
+
+        <label style="display: flex; align-items: center; gap: 4px; cursor: pointer;">
+            <input type="checkbox" id="agree" style="width: 15px; height: 15px; margin: 0; padding: 0;" required>
+            Tôi đồng ý tham gia
+        </label>
+        
+        <br><button type="submit">Gửi đăng ký</button>
+    </form>
 
     <div class="footer">
         <div class="icon">
@@ -104,22 +117,20 @@
         <p>Powered by: Nguyen Duc</p>
     </div>
 </body>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
     integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="admin_login.js">
-
+<script type="module" src="form.js">
 </script>
 <script>
-    function showPassword() {
-    var check = document.getElementById("mypassword");
-    if (check.type === "password") {
-        check.type = "text";
-    } else {
-        check.type = "password";
-    }
-}
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+});
 </script>
 </html>

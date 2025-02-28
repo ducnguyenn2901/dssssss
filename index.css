@@ -5,18 +5,13 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff9966, #ff5e62);
+    color: #333;
 }
 
-body button {
-    margin-top: 20px;
-}
-
-body .tittle {
-    margin-top: 40px;
-    text-align: center;
-    font-weight: 700;
-}
 .head {
     background-color: #eb5454d5;
 }
@@ -55,195 +50,12 @@ body .tittle {
     text-decoration: none;
     color: white;
 }
-.header .icon .bags {
-    margin-left: 20px;
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
 }
-
-.header .icon .users {
-    margin-left: 20px;
-}
-
-.hinh img {
-    height: 100%;
-    width: 100%;
-}
-
-.hinh .ap {
-    margin-left: 25px;
-}
-
-.hinh .care {
-    margin-left: 25px;
-}
-
-.san-pham {
-    margin-top: 100px;
-}
-.san-pham a {
-    text-decoration: none;
-    color: black;
-}
-.san-pham .box {
-    width: 285px;
-    height: 408px;
-    position: relative;
-    padding: 24px 20px 16px;
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-    border-radius: 2%;
-    margin-right: 20px;
-    margin-top: 23px;
-}
-
-.san-pham .box:hover {
-    border-color: rgb(119, 119, 119);
-}
-
-.san-pham h5 {
-    margin-top: 20px;
-    font-size: medium;
-    font-weight: 700;
-    text-align: left;
-}
-
-.san-pham .product img {
-    width: 245px;
-    height: 245px;
-    display: block;
-    object-fit: cover;
-}
-
-.san-pham .apple {
-    display: flex;
-    justify-content: center;
-}
-
-.san-pham .product {
-    margin-top: 20px;
-    width: 245px;
-    height: 343px;
-}
-
-.san-pham .tag {
-    position: absolute;
-    top: 7px;
-    right: 8px;
-}
-
-.san-pham .tag img {
-    width: 99px;
-    height: 30px;
-    display: block;
-    object-fit: cover;
-}
-
-.san-pham .product .price {
-    bottom: 15px;
-    left: 20px;
-    position: absolute;
-}
-
-.san-pham .gia-goc {
-    color: #86868b;
-    text-decoration: line-through;
-    padding-left: 10px;
-}
-
-.san-pham .gia-ban {
-    color: #06c;
-    font-weight: 800;
-}
-
-.anh {
-    margin-top: 100px;
-    text-align: center;
-}
-
-.anh .img {
-    display: block;
-    object-fit: cover;
-    height: 401px;
-    width: 1200px;
-    text-align: center;
-}
-
-.news {
-    margin-top: 70px;
-
-}
-
-.news .noidung {
-    display: flex;
-    justify-content: center;
-}
-
-.news .bao {
-    border: 1px solid #ccc;
-    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 10%), 0 2px 6px 2px rgb(60 64 67 / 15%);
-    border-radius: 3%;
-    margin: 10px;
-    padding-bottom: 15px;
-    width: 386.66px;
-}
-
-.news .bao img {
-    display: block;
-    object-fit: cover;
-    width: 386.66px;
-    height: 218px;
-    border-top-left-radius: 3%;
-    border-top-right-radius: 3%;
-}
-
-.news .noidung .bao .date {
-    color: #86868b;
-    font-size: small;
-    margin-left: 20px;
-    font-weight: 600;
-}
-
-.news .noidung .bao .news-tittles{
-    margin-left: 20px;
-    margin-right: 40px;
-    margin-top: 20px;
-    font-weight: 800;
-    font-size: 17px;
-}
-
-.regist {
-    text-align: center;
-    background-color: #f2f2f2;
-    height: 242px;
-    margin-top: 80px;
-    padding: 30px 0px 30px 0px;
-    width: 100%;
-}
-
-.regist form {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.regist form #inputEmail {
-    border-radius: 40px;
-    width: 470px;
-    height: 40px;
-    padding-left: 20px;
-}
-
-.regist form #registBtn {
-    background-color: #0066cc;
-    color: #f2f2f2;
-    border-radius: 40px;
-    border: none;
-    width: 100px;
-    height: 40px;
-    margin-left: -52px;
-    font-size: 12px;
-}
-
 .footer {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -263,3 +75,40 @@ body .tittle {
     font-weight: 600;
 }
 
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        background: rgba(235, 84, 84, 0.95);
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .header .menu a {
+        display: block;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+    .header i {
+        margin-left: 20px;
+        display: flex;
+        gap: 20px;
+    }
+}

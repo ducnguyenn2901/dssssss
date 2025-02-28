@@ -17,6 +17,7 @@ body .tittle {
     text-align: center;
     font-weight: 700;
 }
+
 .head {
     background-color: #eb5454d5;
 }
@@ -27,8 +28,8 @@ body .tittle {
 }
 
 .header .logo img {
-    width: 105px;
-    height: 45px;
+    width: 40px;
+    height: 50px;
     margin-right: 20px;
 }
 
@@ -55,10 +56,21 @@ body .tittle {
     text-decoration: none;
     color: white;
 }
-.header .icon .bags {
-    margin-left: 20px;
+.footer {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: #515154;
+    text-align: center;
 }
 
-.header .icon .users {
-    margin-left: 20px;
+.footer .icon a {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 5px;
+}
+
+.footer p {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: 600;
 }
