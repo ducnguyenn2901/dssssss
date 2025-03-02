@@ -53,10 +53,6 @@ function loadRegistrations() {
                 </tr>`;
                 tableBody.innerHTML += row;
             });
-        } else {
-            console.log("Không có dữ liệu trong Firebase!");
         }
-    }).catch(error => {
-        console.error("Lỗi khi lấy dữ liệu từ Firebase:", error);
     });
 }
