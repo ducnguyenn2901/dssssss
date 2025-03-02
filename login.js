@@ -37,7 +37,6 @@ function loadRegistrations() {
 
     get(dbRef).then(snapshot => {
         if (snapshot.exists()) {
-            console.log("Dữ liệu lấy được:", snapshot.val());
             let tableBody = document.getElementById("dataTable");
             tableBody.innerHTML = "";
 
