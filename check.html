@@ -14,10 +14,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>BKU</title>
-    <link rel="shortcut icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmMiyNm0-af3xQ5CPPwsVinkTyy0oc_MsvxQ&s"
-        type="image/x-icon">
+    <title>HUST</title>
+    <link rel="shortcut icon" href="./images.png" type="image/x-icon">
 </head>
 
 <body>
@@ -30,8 +28,8 @@
                 <a href="./index.html">Trang chủ</a>
                 <a href="./form.html">Tri ân</a>
                 <a href="./check.html">Sự kiện</a>
+                <a href="./member.html">Thành viên</a>
                 <a href="./ERR.html">Tin Tức</a>
-                <a href="./ERR.html">Quản lý điều hành</a>
                 <a href="./ERR.html">Chuyên môn</a>
                 <a href="./ERR.html">Liên hệ</a>
             </div>
@@ -49,32 +47,17 @@
             <h5>Các hoạt động:</h5>
             <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+                <label class="form-check-label" for="validationFormCheck1">Chụp ảnh kỉ niệm</label>
                 <div class="invalid-feedback">Example invalid feedback text</div>
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+                <label class="form-check-label" for="validationFormCheck1">Văn nghệ</label>
                 <div class="invalid-feedback">Example invalid feedback text</div>
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-                <div class="invalid-feedback">Example invalid feedback text</div>
-            </div>
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-                <div class="invalid-feedback">Example invalid feedback text</div>
-            </div>
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
-                <div class="invalid-feedback">Example invalid feedback text</div>
-            </div>
-            <div class="form-check mb-3">
-                <input type="checkbox" class="form-check-input" id="validationFormCheck1">
-                <label class="form-check-label" for="validationFormCheck1">Check this checkbox</label>
+                <label class="form-check-label" for="validationFormCheck1">Làm thiệp và viết thư cảm ơn</label>
                 <div class="invalid-feedback">Example invalid feedback text</div>
             </div>
 
@@ -110,23 +93,11 @@
 
             <div class="mb-3">
                 <label for="validationTextarea" class="form-label">Tâm thư</label>
-                <textarea class="form-control" id="validationTextarea" placeholder=" Nhập đi thằng L"></textarea>
+                <textarea class="form-control" id="validationTextarea" placeholder=" "></textarea>
                 <div class="invalid-feedback">
                     Please enter a message in the textarea.
                 </div>
             </div>
-
-
-            <div class="mb-3">
-                <select class="form-select" aria-label="select example">
-                    <option value="">Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <div class="invalid-feedback">Example invalid select feedback</div>
-            </div>
-
 
             <div class="mb-3">
                 <button class="btn btn-primary" type="submit" disabled>Submit form</button>
@@ -145,20 +116,16 @@
     integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
-    function uploadImage() {
-        var input = document.getElementById("imageUpload");
-        var file = input.files[0];
-        var read = new FileReader();
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
 
-        read.onload = function (e) {
-            var img = document.createElement("img");
-            img.src = e.target.result;
-            img.style.maxWidth = "100px"
-            img.style.height = "100px"
-            document.getElementById("previewContainer").appendChild(img);
-        };
-        read.readAsDataURL(file);
-    }
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+        });
+    });
+
 </script>
+
 
 </html>

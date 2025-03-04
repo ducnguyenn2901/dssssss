@@ -15,130 +15,135 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css
         " />
-    <title>BKU</title>
-    <link rel="shortcut icon"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmMiyNm0-af3xQ5CPPwsVinkTyy0oc_MsvxQ&s"
-        type="image/x-icon">
+    <title>HUST</title>
+    <link rel="shortcut icon" href="./images.png" type="image/x-icon">
 </head>
 <style>
     * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* background: linear-gradient(135deg, #ff9966, #ff5e62); */
-    color: #333;
-}
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(135deg, #ff9966, #ff5e62); */
+        color: #333;
+    }
 
-.head {
-    background-color: #eb5454d5;
-}
-.header {
-    height: 64px;
-    display: flex;
-    align-items: center;
-}
+    .head {
+        background-color: #eb5454d5;
+    }
 
-.header .logo img {
-    width: 40px;
-    height: 50px;
-    margin-right: 20px;
-}
-
-.header .menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    padding: 23px 16px;
-    font-weight: 500;
-    margin: 8px;
-}
-
-.header .menu a:hover {
-    background-color: white;
-    color: black;
-}
-
-.header .icon {
-    margin-left: 25px;
-    color: white;
-    font-size: larger;
-}
-.header .icon a {
-    text-decoration: none;
-    color: white;
-}
-.menu-toggle {
-    display: none;
-    font-size: 26px;
-    color: white;
-    cursor: pointer;
-}
-.footer {
-    padding-top: 64px;
-    padding-bottom: 64px;
-    background-color: #eb5454d5;
-    text-align: center;
-}
-
-.footer .icon a {
-    color: #fff;
-    font-size: 24px;
-    margin-left: 5px;
-}
-
-.footer p {
-    margin-top: 20px;
-    color: #fff;
-    font-weight: 600;
-}
-    @media (max-width: 768px) {
     .header {
-        padding: 10px;
+        height: 64px;
+        display: flex;
+        align-items: center;
     }
 
-    img {
-        max-width: 100%;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-
-    .header .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 64px;
-        left: 0;
-        background: rgba(235, 84, 84, 0.95);
-        text-align: center;
-        padding: 10px 0;
-        border-radius: 0 0 10px 10px;
+    .header .logo img {
+        width: 40px;
+        height: 50px;
+        margin-right: 20px;
     }
 
     .header .menu a {
-        display: block;
-        padding: 12px;
-        font-size: 16px;
+        text-decoration: none;
+        color: white;
+        font-size: 15px;
+        padding: 23px 16px;
+        font-weight: 500;
+        margin: 8px;
     }
 
-    .menu.active {
-        display: flex;
+    .header .menu a:hover {
+        background-color: white;
+        color: black;
     }
-    .header i {
-        margin-left: 20px;
-        display: flex;
-        gap: 20px;
+
+    .header .icon {
+        margin-left: 25px;
+        color: white;
+        font-size: larger;
     }
-}
+
+    .header .icon a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .menu-toggle {
+        display: none;
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .footer {
+        padding-top: 64px;
+        padding-bottom: 64px;
+        background-color: #eb5454d5;
+        text-align: center;
+    }
+
+    .footer .icon a {
+        color: #fff;
+        font-size: 24px;
+        margin-left: 5px;
+    }
+
+    .footer p {
+        margin-top: 20px;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            padding: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .menu-toggle {
+            display: block;
+        }
+
+        .header .menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            background: rgba(235, 84, 84, 0.95);
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .header .menu a {
+            display: block;
+            padding: 12px;
+            font-size: 16px;
+        }
+
+        .menu.active {
+            display: flex;
+        }
+
+        .header i {
+            margin-left: 20px;
+            display: flex;
+            gap: 20px;
+        }
+    }
 </style>
+
 <body>
     <div class="position-sticky top-0 left-0 z-3 head" style="display: flex; justify-content: center;">
         <div class="header">
@@ -149,8 +154,8 @@ body {
                 <a href="./index.html">Trang chủ</a>
                 <a href="./form.html">Tri ân</a>
                 <a href="./check.html">Sự kiện</a>
+                <a href="./member.html">Thành viên</a>
                 <a href="./ERR.html">Tin Tức</a>
-                <a href="./ERR.html">Quản lý điều hành</a>
                 <a href="./ERR.html">Chuyên môn</a>
                 <a href="./ERR.html">Liên hệ</a>
             </div>
@@ -185,4 +190,5 @@ body {
         menu.classList.toggle('active');
     });
 </script>
+
 </html>
