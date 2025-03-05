@@ -57,6 +57,7 @@ body {
     cursor: pointer;
 }
 .footer {
+    margin-top: auto;
     padding-top: 64px;
     padding-bottom: 64px;
     background-color: #eb5454d5;
