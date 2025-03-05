@@ -124,6 +124,26 @@
 <script type="module" src="form.js">
 </script>
 <script>
+    function showImages() {
+        const preview = document.querySelector("#imagePreview");
+        const files = document.querySelector("#imageUpload").files;
+        preview.innerHTML = "";
+        if (files) {
+            Array.from(files).forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.createElement("img");
+                img.src = e.target.result;
+                img.style.maxWidth = "100px";
+                img.style.maxHeight = "100px";
+                preview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+            });
+        }
+        }
+    document.querySelector("#imageUpload").addEventListener("change", showImages);
+
     document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.querySelector(".menu-toggle");
     const menu = document.querySelector(".menu");
